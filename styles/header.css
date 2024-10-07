@@ -1,82 +1,83 @@
 header {
-    padding-block: 2rem;
-
-    @media (width < 80em) {
-        padding-top: 0;
-        padding-bottom: 2rem;
-    }
+  padding-block: 2rem;
+  padding-top: 0;
+  padding-bottom: 2rem;
 }
 
 header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    @media (width < 80em) {
-        display: block;
-    }
+  display: block;
 }
 
 #profile {
-    display: flex;
-    gap: 2rem;
-
-    @media (width < 80em) {
-        display: block;
-        gap: 1rem;
-    }
+  display: block;
+  gap: 1rem;
 }
 
 #profile img {
-    width: 11rem;
-    height: 11rem;
-    object-fit: cover;
-    border-radius: 50%;
-
-    @media (width < 80em) {
-        width: 7.5rem;
-        height: 7.5rem;
-    }
+  width: 7.5rem;
+  height: 7.5rem;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 #profile #sobre {
-    max-width: 24rem;
+  max-width: 24rem;
 }
 
-#profile h1{
-    color: var(--text-color-primary);
-    font: var(--text-lg);
-    margin-bottom: 0.5rem;
+#profile h1 {
+  color: var(--text-color-primary);
+  font: var(--text-lg);
+  margin-bottom: 0.5rem;
 }
 
-#profile p{
-    font: var(--text-mid);
-    color: var(--text-color-secondary);
+#profile p {
+  font: var(--text-mid);
+  color: var(--text-color-secondary);
 }
 
 #info {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    width: 17.5rem;
-    
-    @media (width < 80em) {
-        margin-top: 1.5rem;
-    }
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 17.5rem;
+  margin-top: 1.5rem;
 }
 
 #info li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font: var(--text-mid);
+}
+
+#info li img {
+  max-width: 1.5rem;
+  max-height: 1.5rem;
+}
+
+@media (width >= 80em) {
+  header {
+    padding-top: 2rem;
+  }
+
+  header .container {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 0.5rem;
+  }
 
-    @media (width < 80em) {
-        font: var(--text-mid);
+  #profile {
+    display: flex;
+    gap: 2rem;
+  }
 
-        img {
-            max-width: 1.5rem;
-            max-height: 1.5rem;
-        }
-    }
+  #profile img {
+    width: 11rem;
+    height: 11rem;
+  }
+
+  #info {
+    margin-top: 0;
+  }
 }

@@ -1,7 +1,15 @@
+*, 
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 :root {
@@ -13,13 +21,13 @@
   --text-color-secondary: #6C6C6C;
 
   --font-family: "poppins", sans-serif;
-  --text-lg: bold 2rem/125% var(--font-family);
+  --text-lg: bold 1.5rem/125% var(--font-family);
   --text-mid: 0.875rem/170% var(--font-family);
   --text-sm: 0.75rem/170% var(--font-family);
   --text: 1rem/1.5 var(--font-family);
 }
 
-body{
+body {
   font: var(--text);
   color: var(--text-color-secondary);
   background-color: var(--bg-color);
@@ -29,34 +37,40 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
 a:hover {
   color: var(--brand-color);
   text-decoration: underline;
 }
 
 .container {
-  padding-inline: 2rem;
-  max-width: 80rem;
+  width: 375px;
+  padding-inline: 1rem;
   margin-inline: auto;
 
-  @media (width < 80em) {
-    width: 375px;
-    padding-inline: 1rem;
-
-    & img {
-      width: 100%;
-    }
+  & img {
+    width: 100%;
   }
 }
 
-.bg-surface-color{
+.bg-surface-color {
   background-color: var(--surface-color);
   background-size: cover;
   width: 100%;
 }
 
-@media (width < 80em) {
-  :root{
-    --text-lg: bold 1.5rem/125% var(--font-family);
+@media (width >= 80em) {
+  .container {
+    padding-inline: 2rem;
+    max-width: 80rem;
+    width: 100%;
+
+    & img {
+      width: auto;
+    }
+  }
+
+  :root {
+    --text-lg: bold 2rem/125% var(--font-family);
   }
 }
