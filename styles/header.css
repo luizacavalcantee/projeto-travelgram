@@ -1,32 +1,52 @@
 header {
-    padding-block: 32px;
+    padding-block: 2rem;
+
+    @media (width < 80em) {
+        padding-top: 0;
+        padding-bottom: 2rem;
+    }
 }
 
 header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media (width < 80em) {
+        display: block;
+    }
 }
+
 #profile {
     display: flex;
-    gap: 32px;
+    gap: 2rem;
+
+    @media (width < 80em) {
+        display: block;
+        gap: 1rem;
+    }
 }
 
 #profile img {
-    width: 176px;
-    height: 176px;
+    width: 11rem;
+    height: 11rem;
     object-fit: cover;
     border-radius: 50%;
+
+    @media (width < 80em) {
+        width: 7.5rem;
+        height: 7.5rem;
+    }
 }
 
 #profile #sobre {
-    max-width: 384px;
+    max-width: 24rem;
 }
 
 #profile h1{
     color: var(--text-color-primary);
     font: var(--text-lg);
-    margin-bottom: 8px;
+    margin-bottom: 0.5rem;
 }
 
 #profile p{
@@ -38,11 +58,25 @@ header .container {
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 16px;
-    width: 280px;
+    gap: 1rem;
+    width: 17.5rem;
+    
+    @media (width < 80em) {
+        margin-top: 1.5rem;
+    }
 }
+
 #info li {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 0.5rem;
+
+    @media (width < 80em) {
+        font: var(--text-mid);
+
+        img {
+            max-width: 1.5rem;
+            max-height: 1.5rem;
+        }
+    }
 }
